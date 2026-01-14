@@ -15,6 +15,7 @@
 #include "dht11_driver.h"
 #include "ssd1306_driver.h"
 #include "uart_log.h"
+#include "timebase_us.h"
 
 #include "main.h"
 #include <stdio.h>
@@ -45,6 +46,7 @@ void APP_Init(void)
 {
     xSensorQueue = xQueueCreate(SENSOR_QUEUE_LEN, sizeof(sensor_msg_t));
 
+    timebase_us_init();
     DHT11_Init();
     OLED_Init();
     UART_Log_Init();

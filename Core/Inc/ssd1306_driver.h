@@ -15,4 +15,4 @@ void OLED_Clear(void);
 void OLED_PrintLine(uint8_t line, const char *text);
 void OLED_Update(void);
 
-#endif // SSD1306_DRIVER_H
+#endif
