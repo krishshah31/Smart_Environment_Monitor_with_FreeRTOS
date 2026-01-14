@@ -1,0 +1,24 @@
+# STM32CubeIDE
+.metadata/
+Debug/
+Release/
+
+# Build outputs
+*.o
+*.elf
+*.map
+*.lst
+*.d
+*.su
+
+# Eclipse
+.settings/
+.project
+.cproject
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temp
+*~
