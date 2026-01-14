@@ -52,25 +52,27 @@ The firmware follows a **producer–consumer RTOS model**:
 
 ## 🧱 Project Structure
 
+```
 Core/
 ├── Inc/
-│ ├── app_tasks.h // RTOS task interface
-│ ├── env_types.h // Shared data structures
-│ ├── dht11_driver.h // DHT11 sensor driver
-│ ├── ssd1306_driver.h // SSD1306 OLED driver
-│ ├── uart_log.h // UART logging interface
-│ └── timebase_us.h // Microsecond timing (DWT)
+│   ├── app_tasks.h          // RTOS task interface
+│   ├── env_types.h          // Shared data structures
+│   ├── dht11_driver.h       // DHT11 sensor driver
+│   ├── ssd1306_driver.h     // SSD1306 OLED driver
+│   ├── uart_log.h           // UART logging interface
+│   └── timebase_us.h        // Microsecond timing (DWT)
 │
 ├── Src/
-│ ├── app_tasks.c // Task creation & scheduling
-│ ├── dht11_driver.c // Real DHT11 protocol implementation
-│ ├── ssd1306_driver.c // Real SSD1306 I2C display driver
-│ ├── uart_log.c // UART logging implementation
-│ └── timebase_us.c // DWT-based delay utilities
+│   ├── app_tasks.c          // Task creation & scheduling
+│   ├── dht11_driver.c       // Real DHT11 protocol implementation
+│   ├── ssd1306_driver.c     // Real SSD1306 I2C display driver
+│   ├── uart_log.c           // UART logging implementation
+│   └── timebase_us.c        // DWT-based delay utilities
 │
-├── freertos.c // CubeMX-generated RTOS bootstrap
-├── main.c // System entry point
-└── stm32f4xx_it.c // Interrupt handlers
+├── freertos.c               // CubeMX-generated RTOS bootstrap
+├── main.c                   // System entry point
+└── stm32f4xx_it.c           // Interrupt handlers
+```
 
 
 ---
